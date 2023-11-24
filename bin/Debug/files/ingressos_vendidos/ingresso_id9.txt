@@ -1,0 +1,10 @@
+------BILHETE------
+
+ID DO CLIENTE: 9.
+
+TEMA: METAVERSO.
+TIPO ENTRADA: MEIA.
+VALOR TOTAL: R$25.00.
+
+------BILHETE------
+

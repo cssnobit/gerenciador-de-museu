@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1700866611 source:c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"libs/style_system.c"
+	"libs/temas_system.c"
+	"libs/file_system.c"
+	"libs/ticket_system.c"
+	"libs/exposicao_system.c"
+	"libs/questions_system.c"
+	"libs/relatorio_system.c"
+
+1700768914 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\register_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1700680654 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\register_system.h
+
+1700867174 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\style_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"style_system.h"
+
+1700692924 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\style_system.h
+
+1700867214 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\temas_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"temas_system.h"
+
+1700688814 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\temas_system.h
+
+1700867072 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\file_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"file_system.h"
+
+1700865745 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\file_system.h
+
+1700866586 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\ticket_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"ticket_system.h"
+
+1700864460 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\ticket_system.h
+
+1700867399 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\exposicao_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"exposicao_system.h"
+
+1700772207 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\exposicao_system.h
+
+1700867680 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\questions_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"questions_system.h"
+
+1700779064 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\questions_system.h
+
+1700867697 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\relatorio_system.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"relatorio_system.h"
+
+1700783986 c:\users\user\documents\faculdade\pim 2\ling e tec de progr\sistema\pim2_v2\pim_2\libs\relatorio_system.h
+
