@@ -15,18 +15,15 @@ static int bom = 0;
 static int muitoBom = 0;
 
 // questionário em si
-void abaQuestionario(char *tema) {
+void abaQuestionario() {
     int opt = 0;
     bool valido = false;
     while(!valido){
-        int cont = 1;
+        int cont = 2;
         while(cont <= 5){
             limpar();
             printf("## ");
             questionario(cont);
-            if(cont == 1){
-                printf(" %s", tema);
-            }
             printf("\n");
             linha();
             for(int i=0; i<5; i++){
@@ -43,13 +40,10 @@ void abaQuestionario(char *tema) {
                 valido = true;
                 esperaRapido();
                 limpar();
-                if(cont == 1){
-                    atualizaNumeroAvaliacaoTema(opt, tema);
-                    geraArquivoAvaliacaoTema(opt, tema);
-                } else {
-                    atualizaNumeroAvaliacao(opt, cont);
-                    geraArquivoAvaliacao(opt, cont);
-                }
+
+                atualizaNumeroAvaliacao(opt, cont);
+                geraArquivoAvaliacao(opt, cont);
+
                 cont++;
             } else if(opt == 0){
                 limpar();
@@ -69,6 +63,62 @@ void abaQuestionario(char *tema) {
         }
 
         if(cont == 6){
+            printf("AGRADECEMOS SUA AVALIACAO!\n");
+            espera();
+        }
+
+    }
+}
+
+void abaQuestionarioTema(char *tema) {
+    int opt = 0;
+    bool valido = false;
+    while(!valido){
+        int cont = 0;
+        while(cont != 1){
+            limpar();
+            printf("## ");
+            questionario(cont+1);
+
+            printf(" %s", tema);
+
+            printf("\n");
+            linha();
+            for(int i=0; i<5; i++){
+                printf("\t%d- %s.\n", i+1, opcaoAvaliacao(i));
+            }
+            printf("\nDIGITE '0' PARA CANCELAR A AVALIACAO.\n");
+            linha();
+
+            printf("DIGITE O NUMERO CORRESPONDENTE\n> ");
+            scanf("%d", &opt);
+
+            if(opt > 0 && opt <= 5){
+                printf("VOCE AVALIOU COMO: %s.\n", opcaoAvaliacao(opt-1));
+                valido = true;
+                esperaRapido();
+                limpar();
+                atualizaNumeroAvaliacaoTema(opt, tema);
+                geraArquivoAvaliacaoTema(opt, tema);
+                cont++;
+            } else if(opt == 0){
+                limpar();
+                printf("OPERACAO CANCELADA!\n");
+                espera();
+                if(cont > 1){
+                    printf("AGRADECEMOS SUA AVALIACAO!\n");
+                    espera();
+                }
+                valido = true;
+                break;
+            } else {
+                limpar();
+                printf("OPCAO INVALIDA!\n");
+                espera();
+            }
+        }
+
+        if(cont == 1){
             printf("AGRADECEMOS SUA AVALIACAO!\n");
             espera();
         }

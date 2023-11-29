@@ -1,2 +1,0 @@
-MICROSOFT MESH
-E uma plataforma de realidade mista da Microsoft que integra a realidade virtual e a realidade aumentada para colaboracao remota e interacao em ambientes virtuais. Permite que as pessoas se encontrem digitalmente, compartilhem espacos 3D e objetos virtuais em tempo real, independentemente da localizacao fisica.

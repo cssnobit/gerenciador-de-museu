@@ -16,7 +16,7 @@
 */
 
 const char *opcoesMenu[] = {"BILHETERIA", "EXIBICAO OBRAS",
-"GERAR RELATORIO", "VALIDAR INGRESSO"};
+"GERAR RELATORIO", "QUESTIONARIO", "VALIDAR INGRESSO"};
 
 // Opção de exibição de temas, na qual inclui o sistema de questionário
 void menuObras() {
@@ -65,7 +65,7 @@ void menuObras() {
                 for(int i=0; i<3; i++){
                     printf("\t%d- %s.\n", i+1, obterItensObra(tema, i));
                 }
-                printf("\n\t4- QUESTIONARIO\n");
+                printf("\n\t4- AVALIE O TEMA\n");
                 printf("\n\t0- SAIR\n");
                 linha();
 
@@ -85,9 +85,9 @@ void menuObras() {
                     printf("VOLTANDO PARA A DESCRICAO PRINCIPAL DO TEMA\n");
                     esperaRapido();
                 } else if(item == 4) {
-                    printf("REDIRECIONANDO PARA O QUESTIONARIO\n");
+                    printf("REDIRECIONANDO PARA O QUESTIONARIO DO TEMA\n");
                     esperaRapido();
-                    abaQuestionario(obterTema(tema-1));
+                    abaQuestionarioTema(obterTema(tema-1));
                 } else {
                     printf("OPCAO INVALIDA!\n");
                     esperaRapido();
@@ -234,9 +234,54 @@ void menuBilheteria() {
     }
 }
 
+ menuQuestionario() {
+    bool ativo = true;
+
+    while(ativo) {
+        limpar();
+        esperaRapido();
+        exibeNome();
+
+        int opt = 0;
+
+        printf("MENU QUESTIONARIO\n");
+        linha();
+
+        printf("\t1- AVALIE O MUSEU.\n");
+
+        printf("\n\t0- SAIR\n");
+        linha();
+
+        printf("DIGITE O NUMERO CORRESPONDENTE A OPCAO\n> ");
+        scanf("%d", &opt);
+
+        limpar();
+
+        switch(opt){
+        case 0:
+            printf("OPCAO DE SAIR SELECIONADO! REDIRECIONANDO PARA O MENU PRINCIPAL\n");
+            esperaRapido();
+
+            ativo = false;
+            break;
+        case 1:
+            printf("REDIRECIONANDO PARA ABA DE: AVALIACAO DO MUSEU\n");
+            esperaRapido();
+
+            abaQuestionario();
+            break;
+        default:
+            printf("OPCAO INVALIDA!\n");
+            esperaRapido();
+
+            break;
+        }
+    }
+ }
+
 // Para exibir na tela o array de "opções" de menu
 void exibeOpcoes(){
-    for(int i=0; i<4; i++){
+    for(int i=0; i<5; i++){
         printf("\t%d- %s.\n", i+1, opcoesMenu[i]);
     }
 }
@@ -283,6 +328,12 @@ int main() {
             menuRelatorio();
             break;
         case 4:
+            printf("REDIRECIONANDO PARA ABA DE: %s\n", opcoesMenu[opt-1]);
+            esperaRapido();
+
+            menuQuestionario();
+            break;
+        case 5:
             printf("REDIRECIONANDO PARA ABA DE: %s\n", opcoesMenu[opt-1]);
             esperaRapido();
 

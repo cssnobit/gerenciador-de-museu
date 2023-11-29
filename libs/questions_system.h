@@ -10,7 +10,8 @@ int obterAvaliacao(int index);
 int recuperaNumeroAvaliacao(int avaliacao, int questionario);
 int recuperaNumeroAvaliacaoTema(int avaliacao, char tema[]);
 
-void abaQuestionario(char tema[]);
+void abaQuestionario();
+void abaQuestionarioTema(char *tema);
 void atualizaNumeroAvaliacao(int avaliacao, int questionario);
 void atualizaNumeroAvaliacaoTema(int avaliacao, char tema[]);
 void questionario(int questao);
